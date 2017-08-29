@@ -63,45 +63,94 @@
 <!-- ======= -->
 							<!-- <li><a href="/Real-Estate-House-Price-Prediction/P1_Real_Estate/Submission/4/Real_Estate.html">Relative path Link: Glmnet.R</a></li> -->
 <!-- >>>>>>> origin/master -->
-							<!-- <p>Price prediction of house take many factors into consideration. </br> -->
+							<p>Price prediction of house take many factors into consideration. </br>
 
  
 </br>
-A bank in Portugal was rolling out a new term deposits product for its existing customers. They wanted to understand which of their existing customers to call and target for this new product so that ROI would be high. In the past they had connected to their customer base through phone calls for various other products. Results for these previous campaigns had been made available for over 30,000 customers.</br>
+Broadly we can divide factors affecting house price in two parts. viz, Micro factors and Macro factors.</br>
+</br>
+Micro factors considers, factors which are local in nature (which will affect price of local real estate market in perticular region or particular house) and Macro factor consider factor which are global in nature (which will affect entire real estate market in country).</br>
+<h2>Micro factors:  This may include below points.</h2>
 
-<h2>Summary:</h2>
-<p>y(subscribed for deposit) is the dependant (target) variable. <br></p>
-<p>1 - age (numeric)<br>
-2 - job : type of job (categorical: “admin.”,“unknown”,“unemployed”,“management”,“housemaid”,“entrepre neur”,“student”, “blue-collar”, “self-employed”,“retired”,“technician”, “services”)<br>
-3 - marital : marital status (categorical: “married”,“divorced”,“single”; note: “divorced” means divorced or widowed)<br>
-4 - education (categorical: “unknown”,“secondary”,“primary”,“tertiary”) <br>
-5 - default: has credit in default? (binary: “yes”,“no”)<br>
-6 - balance: average yearly balance, in euros (numeric)<br>
-7 - housing: has housing loan? (binary: “yes”,“no”)<br>
-8 - loan: has personal loan? (binary: “yes”,“no”)<br>
-<br>
-Related with the last contact of the current campaign:<br>
-9 - contact: contact communication type (categorical: “unknown”,“telephone”,“cellular”)<br>
-10 - day: last contact day of the month (numeric))<br>
-<br>
-Direct Marketing Campaign: Details and Phase I Tasks<br>
-11 - month: last contact month of year (categorical: “jan”, “feb”, “mar”, . . . , “nov”, “dec”)<br>
-12 - duration: last contact duration, in seconds (numeric)<br>
-<br>
-other attributes: <br>
-13 - campaign: number of contacts performed during this campaign and for this client (numeric, includes last contact)<br>
-14 - pdays: number of days that passed by after the client was last contacted from a previous campaign (numeric, -1 means client was not previously contacted)<br>
-15 - previous: number of contacts performed before this campaign and for this client (numeric)<br>
-16 - poutcome: outcome of the previous marketing campaign (categorical: “unknown”,“other”,“failure”,“success”)<br></p>
-<h2>Solutioning :</h2>
-<p>It's a binary clasiification problem. I am using 'randomForest' package.</p>
-<h2>Resultes :</h2>
-<p>Accurecy of <em>~90%</em> on test data <br>
-KS score of <em>~42%</em> on test data <br>
-Precession of <em>~62%</em> on test data <br>
-True Positive Rate of <em>~46%</em> on test data <br></p>
-<h2>Conclusion :</h2>
-<p>With Accurecy of 90% we can say most</p>
+<ul>
+  <li>Property Location</li>
+  <li>Updates and Upgrades (Maintenance of house)</li>
+  <li>Inspection Report</li>
+  <li>Neighborhood Comps</li>
+  <li>Appraisal Value</li>
+  <li>And last but not the least, 'features of the house'</li>
+ 
+</ul>  
+<h2>Micro factors:  This may include below points.</h2>
+
+<ul>
+  <li>Economic Indicators</li>
+  <li>Interest Rates</li>
+  <li>Investors</li>
+ </ul> 
+
+</br>
+
+
+Reference: <a href="http://resources.point.com/8-biggest-factors-affect-real-estate-prices/">http://resources.point.com/8-biggest-factors-affect-real-estate-prices/</a>  </br>
+
+
+ </br>
+
+As house price depends on property local, we cannot have general solution to predict house price for entire state/country. House price vary heavily from one location to other, hence in this project we are predicting the house price for particular city (Melbourne city in Australia) and this solution can not be applied on any other region/city</br>
+ </br>
+The data we have, contains some of the features listed above, like Property Location, Features of the house (Number of bedrooms, bathrooms, car parking etc.). We also have ferture like method by which the house was sold and seller name.</br>
+ </br>
+As, we can see, data provided does not have all the features listed above, so it is obvious that my predictions would not be 100% accurate, rather no prediction can be 100% accurate in data science, but if we have more quality features with us more accurate will be our model.</br>
+ </br>
+But, here we have to work with whatever data we have, and try to get some meaningful results from it.</br>
+ </br>
+ 
+<h3>Lets, talk about data which we have.</h3></br>
+Features provided are...</br>
+ </br>
+Property Location: Suburb, Address, Distance, Postcode, Council Area</br>
+
+Future of the house: Rooms, Type, Bedroom2, Bathroom, Car, Land size, Building Area, Year Built</br>
+
+Sales methods and Real Estate Agent: Method, Seller</br>
+
+  </br>
+
+Below is the short description of fetures</br>
+</br>
+  
+Suburb: Suburb name,</br>
+
+Address: Address of the house,</br>
+
+Rooms: Number of rooms,</br>
+
+Price: Price in dollars,</br>
+
+Method: Method of sale,</br>
+
+Type: Type of house,</br>
+
+Seller: Real Estate Agent,</br>
+
+Distance: Distance from Center of the city,</br>
+
+Postcode: Postal code of area,</br>
+
+Bedroom2: Number of Bedrooms,</br>
+
+Bathroom: Number of Bathrooms,</br>
+
+Car: Number of car spots,</br>
+
+Land size: Land Size (This also covers open area of property),</br>
+
+Building Area: Building Size (Carpet Area),</br>
+
+Year Built: Year the house was built,</br>
+
+Council Area: Governing council for the area<br />
 							</p>
 							
 							<ul class="actions">
