@@ -43,7 +43,8 @@
 <!-- ======= -->
 							 <!-- <li><a href="/Real-Estate-House-Price-Prediction/P1_Real_Estate/Submission/4/Real_Estate.html">Code</a> -->
 <!-- >>>>>>> origin/master -->
-							<li><a href="#one">Technical Analysis</a></li>
+							<li><a href="#one">Solutioning</a></li>
+							<li><a href="#two">Reults and Conclusion</a></li>
 							<li><a href="#three">Get in touch</a></li>
 						</ul>
 					</nav>
@@ -56,7 +57,7 @@
 				<!-- Intro -->
 					<section id="intro" class="wrapper style1 fullscreen fade-up">
 						<div class="inner">
-						<a href="#" class="image"><img src="images/gold-real-estate.jpg" alt="" data-position="top center" style="width:304px;height:228px;"/></a>
+						<a href="#" class="image"><img src="images/bank.jpg" alt="" data-position="top center" style="width:304px;height:228px;"/></a>
 							<h1>Bank: Telemarketing for Deposit</h1>
 <!-- <<<<<<< HEAD -->
 							<!-- <li><a href="./Real-Estate-House-Price-Prediction/P1_Real_Estate/Submission/4/Real_Estate.html">Relative path Link: Glmnet.R</a></li> -->
@@ -64,44 +65,62 @@
 							<!-- <li><a href="/Real-Estate-House-Price-Prediction/P1_Real_Estate/Submission/4/Real_Estate.html">Relative path Link: Glmnet.R</a></li> -->
 <!-- >>>>>>> origin/master -->
 							<!-- <p>Price prediction of house take many factors into consideration. </br> -->
-
- 
 </br>
 A bank in Portugal was rolling out a new term deposits product for its existing customers. They wanted to understand which of their existing customers to call and target for this new product so that ROI would be high. In the past they had connected to their customer base through phone calls for various other products. Results for these previous campaigns had been made available for over 30,000 customers.</br>
 
-<h2>Summary:</h2>
-<p>y(subscribed for deposit) is the dependant (target) variable. <br></p>
-<p>1 - age (numeric)<br>
-2 - job : type of job (categorical: “admin.”,“unknown”,“unemployed”,“management”,“housemaid”,“entrepre neur”,“student”, “blue-collar”, “self-employed”,“retired”,“technician”, “services”)<br>
-3 - marital : marital status (categorical: “married”,“divorced”,“single”; note: “divorced” means divorced or widowed)<br>
-4 - education (categorical: “unknown”,“secondary”,“primary”,“tertiary”) <br>
-5 - default: has credit in default? (binary: “yes”,“no”)<br>
-6 - balance: average yearly balance, in euros (numeric)<br>
-7 - housing: has housing loan? (binary: “yes”,“no”)<br>
-8 - loan: has personal loan? (binary: “yes”,“no”)<br>
+<h2>Data Summary:</h2>
+<ul>
+ <li>y (subscribed for deposit): This is the dependent (target) variable.</li>
+ <li>Age : Age of customer (numeric)</li>
+ <li>Job : Type of job (categorical: “admin.”,“unknown”,“unemployed”,“management”,“housemaid”,“entrepreneur”,“student”, “blue-collar”, “self-employed”, “retired”, “technician”, “services”)</li>
+ <li>Marital : Marital status (categorical: “married”, “divorced”, “single”; note: “divorced” means divorced or widowed)</li>
+ <li>Education : Education of customer (categorical: “unknown”, “secondary”, “primary”, “tertiary”)</li>
+ <li>Default: Has credit in default? (binary: “yes”, “no”)</li>
+ <li>Balance: Average yearly balance, in euros (numeric)</li>
+ <li>Housing: Does customer has housing loan? (binary: “yes”, “no”)</li>
+ <li>Loan: Does customer has personal loan? (binary: “yes”, “no”)</li>
+</ul> 
 <br>
-Related with the last contact of the current campaign:<br>
-9 - contact: contact communication type (categorical: “unknown”,“telephone”,“cellular”)<br>
-10 - day: last contact day of the month (numeric))<br>
+<h3>Related with the last contact of the current campaign</h3>
+<li>Contact: Contact communication type (categorical: “unknown”, “telephone”, “cellular”)</li>
+<li>Day: Last contact day of the month (numeric))</li>
 <br>
-Direct Marketing Campaign: Details and Phase I Tasks<br>
-11 - month: last contact month of year (categorical: “jan”, “feb”, “mar”, . . . , “nov”, “dec”)<br>
-12 - duration: last contact duration, in seconds (numeric)<br>
+<h3>Direct Marketing Campaign: Details and Phase I Tasks</h3>
+<li>Month: Last contact month of year (categorical: “jan”, “feb”, “mar”, . . . , “nov”, “dec”)</li>
+<li>Duration: Last contact duration, in seconds (numeric)</li>
 <br>
-other attributes: <br>
-13 - campaign: number of contacts performed during this campaign and for this client (numeric, includes last contact)<br>
-14 - pdays: number of days that passed by after the client was last contacted from a previous campaign (numeric, -1 means client was not previously contacted)<br>
-15 - previous: number of contacts performed before this campaign and for this client (numeric)<br>
-16 - poutcome: outcome of the previous marketing campaign (categorical: “unknown”,“other”,“failure”,“success”)<br></p>
-<h2>Solutioning :</h2>
-<p>It's a binary clasiification problem. I am using 'randomForest' package.</p>
-<h2>Resultes :</h2>
-<p>Accurecy of <em>~90%</em> on test data <br>
+<h3>Other attributes</h3>
+<li>Campaign: Number of contacts performed during this campaign and for this client (numeric, includes last contact)</li>
+<li>Pdays: Number of days that passed by after the client was last contacted from a previous campaign (numeric, -1 means client was not previously contacted)</li>
+<li>Previous: Number of contacts performed before this campaign and for this client (numeric)</li>
+<li>Poutcome: Outcome of the previous marketing campaign (categorical: “unknown”, “other”, “failure”, “success”)</li></p>
+
+<h2>Objective :</h2>
+<p>Our main objective is to identify as many as potential customers who would likely to subscribe for new deposit product.</br>
+We will use "Accuracy" matrix as one of the matrix to judge our results. Also data is highly imbalanced, so other matrix we will check is “True Positive Rate (Recall)” ,"Precession" and "KS".
+</p>
+
+<!-- <h2>Solutioning :</h2>
+<p>It's a binary classification problem. I am using 'randomForest' package.</p> -->
+<!-- <h2>Results :</h2>
+<p>Accuracy of <em>~90%</em> on test data <br>
 KS score of <em>~42%</em> on test data <br>
 Precession of <em>~62%</em> on test data <br>
 True Positive Rate of <em>~46%</em> on test data <br></p>
 <h2>Conclusion :</h2>
-<p>With Accurecy of 90% we can say most</p>
+<p>With Accuracy of 90% we can say we are able to identify (segregate) most of our customers accurately in terms of which customer would likely to subscribe for deposit product.<br> 
+As data is highly imbalanced, true picture of our results is provided by precession rate, which is 62%, i.e. out of total identified potential customers 62% are likely to subscribe for deposit product.<br>
+With True Positive rate of 46% we can say we are able to capture 46% of total actual potential customer who are likely to subscribe for deposit product.
+
+<h3>Final comments:</h3>
+So to summarize, looking at the above results one may say we are loosing around 54% of our potential customer, but with this model now manager would call only 10% customer from the available list so, this will reduce cost, most importantly as we are calling less number of customer, there would not be any customer dissatisfaction about unnecessary marketing calls.<br>
+We must remember not model can be perfect and provide 100% results, and there is always a chance of improvement.<br>
+Also, we can see from this results that, there is a tradeoff between 54% loosing potential customer and decreasing customer dissatisfaction.<br>
+So by choosing this model manager would do a good job as he has maintain the satisfaction level 90% of his costumer in list by not making unnecessary calls.<br>
+<br>
+Note: I have used Xgboost on this data set and I'm able to achieve True positive rate of 82%. So by using different algorithm is possible to achieve higher TPR. But for demonstration purpose I have used random forest.
+</p> -->
+
 							</p>
 							
 							<ul class="actions">
@@ -116,6 +135,8 @@ True Positive Rate of <em>~46%</em> on test data <br></p>
 							<!-- <a href="#" class="image"><img src="images/pic01.jpg" alt="" data-position="center center" /></a> -->
 							<div class="content">
 								<div class="inner">
+								<h2>Solutioning :</h2>
+								<p>It's a binary classification problem. I am using 'RandomForest' algorithm.</p>
 								<!-- <iframe src="/Real-Estate-House-Price-Prediction/P1_Real_Estate/Submission/4/Real_Estate.html" frameborder="0"  -->
 								<!-- style="overflow: hidden; height: 100%; -->
 								<!-- width: 100%; position: absolute;" height="100%" width="100%"></iframe> -->
@@ -151,17 +172,40 @@ True Positive Rate of <em>~46%</em> on test data <br></p>
 					</section>
 
 				Two
-					<!-- <section id="two" class="wrapper style3 fade-up"> -->
-						<!-- <div class="inner"> -->
-							<!-- <h2>What we do</h2> -->
-							<!-- <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p> -->
-							<!-- <div class="features"> -->
-								<!-- <section> -->
-									<!-- <span class="icon major fa-code"></span> -->
-									<!-- <h3>Lorem ipsum amet</h3> -->
-									<!-- <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p> -->
-									<!-- <li><a href="/Manufacturing-Backorder-project/submission/1/1XGB.R">Relative path Link</a></li> -->
-								<!-- </section> -->
+					<section id="two" class="wrapper style2 spotlights">
+						<section>
+							<!-- <a href="#" class="image"><img src="images/pic01.jpg" alt="" data-position="center center" /></a> -->
+							<div class="content">
+								<div class="inner">
+								
+<h2>Results and Conclusion :</h2>
+<h3>Results :</h3>
+<p>Accuracy of <em>~90%</em> on test data <br>
+KS score of <em>~42%</em> on test data <br>
+Precession of <em>~62%</em> on test data <br>
+True Positive Rate of <em>~46%</em> on test data <br></p>
+<h3>Conclusion :</h3>
+<p>With Accuracy of 90% we can say we are able to identify (segregate) most of our customers accurately in terms of which customer would likely to subscribe for deposit product.<br> 
+As data is highly imbalanced, true picture of our results is provided by precession rate, which is 62%, i.e. out of total identified potential customers 62% are likely to subscribe for deposit product.<br>
+With True Positive rate of 46% we can say we are able to capture 46% of total actual potential customer who are likely to subscribe for deposit product.
+
+<h3>Final comments:</h3>
+So to summarize, looking at the above results one may say we are loosing around 54% of our potential customer, but with this model now manager would call only 10% customer from the available list so, this will reduce cost, most importantly as we are calling less number of customer, there would not be any customer dissatisfaction about unnecessary marketing calls.<br>
+We must remember not model can be perfect and provide 100% results, and there is always a chance of improvement.<br>
+Also, we can see from this results that, there is a tradeoff between 54% loosing potential customer and decreasing customer dissatisfaction.<br>
+So by choosing this model manager would do a good job as he has maintain the satisfaction level 90% of his costumer in list by not making unnecessary calls.<br>
+<br>
+<h3>Note:</h3>
+I have used Xgboost on this data set and I'm able to achieve True positive rate of 82%. So by using different algorithm is possible to achieve higher TPR. But for demonstration purpose I have used random forest.
+</p>
+								<!-- <iframe src="/Real-Estate-House-Price-Prediction/P1_Real_Estate/Submission/4/Real_Estate.html" frameborder="0"  -->
+								<!-- style="overflow: hidden; height: 100%; -->
+								<!-- width: 100%; position: absolute;" height="100%" width="100%"></iframe> -->
+								<!-- <iframe src="/Real-Estate-House-Price-Prediction/P1_Real_Estate/Submission/4/Real_Estate.html" frameborder="0" scrolling="no" onload="resizeIframe(this)" /> -->
+									<!-- <iframe src="/Bank_Marketing/Submission/3/Bank Marketing.html" height="2000" width="1000"></iframe> -->
+								</div>
+							</div>
+						</section>
 								<!-- <section> -->
 									<!-- <span class="icon major fa-lock"></span> -->
 									<!-- <h3>Aliquam sed nullam</h3> -->
