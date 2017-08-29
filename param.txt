@@ -1,0 +1,21 @@
+H:/softwares/Data Analytics_Darshan/Introduction/8.Seg.Clus
+
+
+do we use t test anova and all in data analysis before modal preration
+
+
+What if the weight (coffeicent) for perticular variable is very high, how do we deal with such data and model
+
+I am actually working on ZSassociates data science challenge but I am stuck will it be possible for you to check if I mail you up?
+0.02
+[536]	train-auc:0.992194+0.000624	test-auc:0.926397+0.003031
+[536]	train-auc:0.992194+0.000624	test-auc:0.926397+0.003031
+
+Stopping. Best iteration:
+[468]	train-auc:0.995066+0.000238	test-auc:0.921648+0.002557
+
+0.02
+[259]	train-KS:0.877031+0.002480	test-KS:0.717096+0.010729
+
+Stopping. Best iteration:
+[92]	train-KS:0.919179+0.003096	test-KS:0.716712+0.013183
